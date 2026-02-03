@@ -19,7 +19,7 @@ function App() {
   useEffect(() => {
     fetchWeatherData(city);
     checkOfflineMode();
-  }, []);
+  }, [city]);
   
   const fetchWeatherData = async (cityName) => {
     setLoading(true);
