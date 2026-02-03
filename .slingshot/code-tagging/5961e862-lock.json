@@ -1,0 +1,97 @@
+{
+  "frontend/nginx.conf": {
+    "filename": "nginx.conf",
+    "path": "frontend/nginx.conf",
+    "version": "1.1",
+    "chunks": {
+      "633ea5": {
+        "user": "Pankaj .",
+        "model": "claude-sonnet-4@20250514",
+        "timestamp": 1770118568,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.1.2",
+        "source": "agent",
+        "type": "agentEditTool",
+        "hash": "bb74be40",
+        "messageId": null,
+        "codeBlockId": null,
+        "isActive": true
+      }
+    },
+    "lines": {
+      "17": {
+        "chunkId": "633ea5",
+        "hash": "f80525dc",
+        "encoded": "#%20API%20proxy",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "633ea5",
+        "hash": "ba709e8b",
+        "encoded": "location%20/api/%20%7B",
+        "prevChunkIds": []
+      },
+      "19": {
+        "chunkId": "633ea5",
+        "hash": "f19b1431",
+        "encoded": "proxy_pass%20http://weather-backend:8080/api/;",
+        "prevChunkIds": []
+      },
+      "20": {
+        "chunkId": "633ea5",
+        "hash": "fd98cd26",
+        "encoded": "proxy_http_version%201.1;",
+        "prevChunkIds": []
+      },
+      "21": {
+        "chunkId": "633ea5",
+        "hash": "c2108f7b",
+        "encoded": "proxy_set_header%20Upgrade%20$http_upgrade;",
+        "prevChunkIds": []
+      },
+      "22": {
+        "chunkId": "633ea5",
+        "hash": "9c667c97",
+        "encoded": "proxy_set_header%20Connection%20'upgrade';",
+        "prevChunkIds": []
+      },
+      "23": {
+        "chunkId": "633ea5",
+        "hash": "a03efee4",
+        "encoded": "proxy_set_header%20Host%20$host;",
+        "prevChunkIds": []
+      },
+      "24": {
+        "chunkId": "633ea5",
+        "hash": "5da1c9a0",
+        "encoded": "proxy_cache_bypass%20$http_upgrade;",
+        "prevChunkIds": []
+      },
+      "25": {
+        "chunkId": "633ea5",
+        "hash": "8b15751f",
+        "encoded": "proxy_set_header%20X-Real-IP%20$remote_addr;",
+        "prevChunkIds": []
+      },
+      "26": {
+        "chunkId": "633ea5",
+        "hash": "b6cc78e6",
+        "encoded": "proxy_set_header%20X-Forwarded-For%20$proxy_add_x_forwarded_for;",
+        "prevChunkIds": []
+      },
+      "27": {
+        "chunkId": "633ea5",
+        "hash": "d3449ab0",
+        "encoded": "proxy_set_header%20X-Forwarded-Proto%20$scheme;",
+        "prevChunkIds": []
+      },
+      "28": {
+        "chunkId": "633ea5",
+        "hash": "46b23985",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

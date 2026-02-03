@@ -1,0 +1,103 @@
+{
+  "frontend/Dockerfile": {
+    "filename": "Dockerfile",
+    "path": "frontend/Dockerfile",
+    "version": "1.1",
+    "chunks": {
+      "eed721": {
+        "user": "Pankaj .",
+        "model": "claude-sonnet-4@20250514",
+        "timestamp": 1770113341,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.1.2",
+        "source": "agent",
+        "type": "agentEditTool",
+        "hash": "666034ec",
+        "messageId": null,
+        "codeBlockId": null,
+        "isActive": true
+      },
+      "36119c": {
+        "user": "Pankaj .",
+        "model": "claude-sonnet-4@20250514",
+        "timestamp": 1770113355,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.1.2",
+        "source": "agent",
+        "type": "agentEditTool",
+        "hash": "1551d4b5",
+        "messageId": null,
+        "codeBlockId": null,
+        "isActive": true
+      },
+      "6cdcf4": {
+        "user": "Pankaj .",
+        "model": "claude-sonnet-4@20250514",
+        "timestamp": 1770113431,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.1.2",
+        "source": "agent",
+        "type": "agentEditTool",
+        "hash": "09f7ea28",
+        "messageId": null,
+        "codeBlockId": null,
+        "isActive": true
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "eed721",
+        "hash": "c82f3afa",
+        "encoded": "#%20Multi-stage%20Docker%20build%20for%20React%20application",
+        "prevChunkIds": [
+          "eed721"
+        ]
+      },
+      "1": {
+        "chunkId": "eed721",
+        "hash": "b6f9509d",
+        "encoded": "#%20Stage%201:%20Build",
+        "prevChunkIds": [
+          "eed721"
+        ]
+      },
+      "2": {
+        "chunkId": "eed721",
+        "hash": "6fca2878",
+        "encoded": "FROM%20--platform=linux/amd64%20node:18-alpine%20AS%20build",
+        "prevChunkIds": [
+          "eed721"
+        ]
+      },
+      "9": {
+        "chunkId": "6cdcf4",
+        "hash": "53acfda9",
+        "encoded": "#%20Install%20dependencies",
+        "prevChunkIds": []
+      },
+      "10": {
+        "chunkId": "6cdcf4",
+        "hash": "e0c3c6e7",
+        "encoded": "RUN%20npm%20install%20--silent",
+        "prevChunkIds": []
+      },
+      "18": {
+        "chunkId": "36119c",
+        "hash": "0848593a",
+        "encoded": "#%20Stage%202:%20Serve%20with%20nginx",
+        "prevChunkIds": []
+      },
+      "19": {
+        "chunkId": "36119c",
+        "hash": "86542fc7",
+        "encoded": "FROM%20--platform=linux/amd64%20nginx:alpine",
+        "prevChunkIds": [
+          "36119c"
+        ]
+      }
+    }
+  }
+}

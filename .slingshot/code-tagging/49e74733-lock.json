@@ -1,0 +1,77 @@
+{
+  "backend/Dockerfile": {
+    "filename": "Dockerfile",
+    "path": "backend/Dockerfile",
+    "version": "1.1",
+    "chunks": {
+      "f34564": {
+        "user": "Pankaj .",
+        "model": "claude-sonnet-4@20250514",
+        "timestamp": 1770113217,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.1.2",
+        "source": "agent",
+        "type": "agentEditTool",
+        "hash": "b2efa903",
+        "messageId": null,
+        "codeBlockId": null,
+        "isActive": true
+      },
+      "9994e5": {
+        "user": "Pankaj .",
+        "model": "claude-sonnet-4@20250514",
+        "timestamp": 1770113230,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.1.2",
+        "source": "agent",
+        "type": "agentEditTool",
+        "hash": "69c0b0b8",
+        "messageId": null,
+        "codeBlockId": null,
+        "isActive": true
+      }
+    },
+    "lines": {
+      "0": {
+        "chunkId": "9994e5",
+        "hash": "394439df",
+        "encoded": "#%20Multi-stage%20Docker%20build%20for%20Spring%20Boot%20application",
+        "prevChunkIds": []
+      },
+      "1": {
+        "chunkId": "9994e5",
+        "hash": "b6f9509d",
+        "encoded": "#%20Stage%201:%20Build",
+        "prevChunkIds": []
+      },
+      "2": {
+        "chunkId": "9994e5",
+        "hash": "3ffae59f",
+        "encoded": "FROM%20--platform=linux/amd64%20maven:3.9-eclipse-temurin-17%20AS%20build",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "f34564",
+        "hash": "951285e0",
+        "encoded": "WORKDIR%20/app",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "f34564",
+        "hash": "cc76b7df",
+        "encoded": "#%20Stage%202:%20Runtime",
+        "prevChunkIds": []
+      },
+      "15": {
+        "chunkId": "f34564",
+        "hash": "c5b9a51f",
+        "encoded": "FROM%20--platform=linux/amd64%20eclipse-temurin:17-jre-alpine",
+        "prevChunkIds": [
+          "f34564"
+        ]
+      }
+    }
+  }
+}

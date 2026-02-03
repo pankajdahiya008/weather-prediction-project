@@ -1,0 +1,31 @@
+{
+  "frontend/src/services/weatherService.js": {
+    "filename": "weatherService.js",
+    "path": "frontend/src/services/weatherService.js",
+    "version": "1.1",
+    "chunks": {
+      "6ea122": {
+        "user": "Pankaj .",
+        "model": "claude-sonnet-4@20250514",
+        "timestamp": 1770118584,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.1.2",
+        "source": "agent",
+        "type": "agentEditTool",
+        "hash": "1e59493c",
+        "messageId": null,
+        "codeBlockId": null,
+        "isActive": true
+      }
+    },
+    "lines": {
+      "2": {
+        "chunkId": "6ea122",
+        "hash": "945e047e",
+        "encoded": "const%20API_BASE_URL%20=%20process.env.REACT_APP_API_URL%20%7C%7C%20'/api/v1/weather';",
+        "prevChunkIds": []
+      }
+    }
+  }
+}

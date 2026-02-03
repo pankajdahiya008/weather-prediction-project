@@ -1,0 +1,95 @@
+{
+  "london": {
+    "forecasts": [
+      {
+        "date": "2024-01-15",
+        "tempMax": 15.5,
+        "tempMin": 8.2,
+        "weather": "Clear",
+        "windSpeed": 5.5,
+        "hasRain": false,
+        "hasThunderstorm": false
+      },
+      {
+        "date": "2024-01-16",
+        "tempMax": 18.3,
+        "tempMin": 10.1,
+        "weather": "Partly Cloudy",
+        "windSpeed": 12.5,
+        "hasRain": false,
+        "hasThunderstorm": false
+      },
+      {
+        "date": "2024-01-17",
+        "tempMax": 42.0,
+        "tempMin": 28.5,
+        "weather": "Sunny",
+        "windSpeed": 3.2,
+        "hasRain": false,
+        "hasThunderstorm": false
+      }
+    ]
+  },
+  "newyork": {
+    "forecasts": [
+      {
+        "date": "2024-01-15",
+        "tempMax": 5.5,
+        "tempMin": -2.0,
+        "weather": "Rain",
+        "windSpeed": 15.5,
+        "hasRain": true,
+        "hasThunderstorm": false
+      },
+      {
+        "date": "2024-01-16",
+        "tempMax": 8.0,
+        "tempMin": 1.5,
+        "weather": "Thunderstorm",
+        "windSpeed": 22.0,
+        "hasRain": true,
+        "hasThunderstorm": true
+      },
+      {
+        "date": "2024-01-17",
+        "tempMax": 12.5,
+        "tempMin": 5.0,
+        "weather": "Cloudy",
+        "windSpeed": 8.5,
+        "hasRain": false,
+        "hasThunderstorm": false
+      }
+    ]
+  },
+  "tokyo": {
+    "forecasts": [
+      {
+        "date": "2024-01-15",
+        "tempMax": 12.5,
+        "tempMin": 6.0,
+        "weather": "Clear",
+        "windSpeed": 7.0,
+        "hasRain": false,
+        "hasThunderstorm": false
+      },
+      {
+        "date": "2024-01-16",
+        "tempMax": 14.0,
+        "tempMin": 7.5,
+        "weather": "Partly Cloudy",
+        "windSpeed": 9.5,
+        "hasRain": false,
+        "hasThunderstorm": false
+      },
+      {
+        "date": "2024-01-17",
+        "tempMax": 16.5,
+        "tempMin": 9.0,
+        "weather": "Clear",
+        "windSpeed": 6.0,
+        "hasRain": false,
+        "hasThunderstorm": false
+      }
+    ]
+  }
+}

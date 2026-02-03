@@ -1,0 +1,527 @@
+{
+  "backend/src/main/java/com/weather/service/WeatherService.java": {
+    "filename": "WeatherService.java",
+    "path": "backend/src/main/java/com/weather/service/WeatherService.java",
+    "version": "1.1",
+    "chunks": {
+      "a43baf": {
+        "user": "Pankaj .",
+        "model": "claude-sonnet-4@20250514",
+        "timestamp": 1770119130,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.1.2",
+        "source": "agent",
+        "type": "agentEditTool",
+        "hash": "0ee75bbb",
+        "messageId": null,
+        "codeBlockId": null,
+        "isActive": true
+      },
+      "094844": {
+        "user": "Pankaj .",
+        "model": "claude-sonnet-4@20250514",
+        "timestamp": 1770119613,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.1.2",
+        "source": "agent",
+        "type": "agentEditTool",
+        "hash": "e341deb7",
+        "messageId": null,
+        "codeBlockId": null,
+        "isActive": true
+      },
+      "e0ff30": {
+        "user": "Pankaj .",
+        "model": "claude-sonnet-4@20250514",
+        "timestamp": 1770119625,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.1.2",
+        "source": "agent",
+        "type": "agentEditTool",
+        "hash": "4dbaca63",
+        "messageId": null,
+        "codeBlockId": null,
+        "isActive": true
+      },
+      "dcdedb": {
+        "user": "Pankaj .",
+        "model": "claude-sonnet-4@20250514",
+        "timestamp": 1770119641,
+        "platform": "VisualStudioCode",
+        "product": "AIPP",
+        "productVersion": "2.1.2",
+        "source": "agent",
+        "type": "agentEditTool",
+        "hash": "b82f61c5",
+        "messageId": null,
+        "codeBlockId": null,
+        "isActive": true
+      }
+    },
+    "lines": {
+      "2": {
+        "chunkId": "dcdedb",
+        "hash": "b4fd6806",
+        "encoded": "import%20com.weather.model.WeatherForecast;",
+        "prevChunkIds": []
+      },
+      "3": {
+        "chunkId": "dcdedb",
+        "hash": "a0acffad",
+        "encoded": "import%20com.weather.model.WeatherResponse;",
+        "prevChunkIds": []
+      },
+      "4": {
+        "chunkId": "dcdedb",
+        "hash": "bfad10b3",
+        "encoded": "import%20lombok.extern.slf4j.Slf4j;",
+        "prevChunkIds": []
+      },
+      "5": {
+        "chunkId": "dcdedb",
+        "hash": "cbf3b0ba",
+        "encoded": "import%20org.springframework.beans.factory.annotation.Value;",
+        "prevChunkIds": []
+      },
+      "6": {
+        "chunkId": "dcdedb",
+        "hash": "750b000b",
+        "encoded": "import%20org.springframework.cache.annotation.Cacheable;",
+        "prevChunkIds": []
+      },
+      "7": {
+        "chunkId": "dcdedb",
+        "hash": "bb468d37",
+        "encoded": "import%20org.springframework.cache.annotation.CacheEvict;",
+        "prevChunkIds": []
+      },
+      "8": {
+        "chunkId": "dcdedb",
+        "hash": "e3c278a7",
+        "encoded": "import%20org.springframework.stereotype.Service;",
+        "prevChunkIds": []
+      },
+      "14": {
+        "chunkId": "a43baf",
+        "hash": "f847a38b",
+        "encoded": "/**",
+        "prevChunkIds": [
+          "a43baf"
+        ]
+      },
+      "27": {
+        "chunkId": "a43baf",
+        "hash": "d7e56af4",
+        "encoded": "*/",
+        "prevChunkIds": [
+          "a43baf"
+        ]
+      },
+      "46": {
+        "chunkId": "a43baf",
+        "hash": "f9b2449c",
+        "encoded": "%7D",
+        "prevChunkIds": [
+          "a43baf"
+        ]
+      },
+      "48": {
+        "chunkId": "094844",
+        "hash": "eb0289d4",
+        "encoded": "/**",
+        "prevChunkIds": [
+          "094844"
+        ]
+      },
+      "49": {
+        "chunkId": "094844",
+        "hash": "399dbf42",
+        "encoded": "*%20Get%20weather%20forecast%20with%20caching",
+        "prevChunkIds": [
+          "094844"
+        ]
+      },
+      "50": {
+        "chunkId": "094844",
+        "hash": "56126ac8",
+        "encoded": "*%20Cache%20eviction%20can%20be%20configured%20via%20application%20properties",
+        "prevChunkIds": [
+          "094844"
+        ]
+      },
+      "51": {
+        "chunkId": "094844",
+        "hash": "f57e339c",
+        "encoded": "*%20Cache%20key%20includes%20offline%20mode%20to%20prevent%20stale%20data%20when%20mode%20changes",
+        "prevChunkIds": [
+          "094844"
+        ]
+      },
+      "52": {
+        "chunkId": "094844",
+        "hash": "d89601c8",
+        "encoded": "*/",
+        "prevChunkIds": [
+          "094844"
+        ]
+      },
+      "53": {
+        "chunkId": "094844",
+        "hash": "b9972279",
+        "encoded": "@Cacheable(value%20=%20%22weather-forecasts%22,%20key%20=%20%22#city%20+%20'_'%20+%20#root.target.offlineModeEnabled%22)",
+        "prevChunkIds": [
+          "094844"
+        ]
+      },
+      "54": {
+        "chunkId": "094844",
+        "hash": "6f75ebff",
+        "encoded": "public%20WeatherResponse%20getWeatherForecast(String%20city)%20%7B",
+        "prevChunkIds": [
+          "094844"
+        ]
+      },
+      "55": {
+        "chunkId": "094844",
+        "hash": "c946551a",
+        "encoded": "log.info(%22Fetching%20weather%20forecast%20for%20city:%20%7B%7D,%20offlineMode:%20%7B%7D%22,",
+        "prevChunkIds": [
+          "094844"
+        ]
+      },
+      "56": {
+        "chunkId": "094844",
+        "hash": "e8430954",
+        "encoded": "city,%20offlineModeEnabled);",
+        "prevChunkIds": [
+          "094844"
+        ]
+      },
+      "60": {
+        "chunkId": "a43baf",
+        "hash": "42f7c135",
+        "encoded": "%7D",
+        "prevChunkIds": [
+          "a43baf"
+        ]
+      },
+      "65": {
+        "chunkId": "a43baf",
+        "hash": "4f29f762",
+        "encoded": "return%20response;",
+        "prevChunkIds": [
+          "a43baf"
+        ]
+      },
+      "66": {
+        "chunkId": "a43baf",
+        "hash": "f706ff69",
+        "encoded": "%7D",
+        "prevChunkIds": [
+          "a43baf"
+        ]
+      },
+      "68": {
+        "chunkId": "e0ff30",
+        "hash": "c07a803a",
+        "encoded": "/**",
+        "prevChunkIds": []
+      },
+      "69": {
+        "chunkId": "a43baf",
+        "hash": "f6e2e0ca",
+        "encoded": "*%20Fetch%20weather%20data%20using%20appropriate%20provider",
+        "prevChunkIds": [
+          "e0ff30",
+          "a43baf"
+        ]
+      },
+      "70": {
+        "chunkId": "a43baf",
+        "hash": "fec5e6dd",
+        "encoded": "*%20Demonstrates%20Strategy%20Pattern",
+        "prevChunkIds": [
+          "a43baf"
+        ]
+      },
+      "71": {
+        "chunkId": "e0ff30",
+        "hash": "848553ec",
+        "encoded": "*/",
+        "prevChunkIds": [
+          "a43baf"
+        ]
+      },
+      "72": {
+        "chunkId": "a43baf",
+        "hash": "6136c1bd",
+        "encoded": "private%20WeatherResponse%20fetchWeatherData(String%20city)%20%7B",
+        "prevChunkIds": [
+          "e0ff30",
+          "a43baf"
+        ]
+      },
+      "73": {
+        "chunkId": "a43baf",
+        "hash": "34fd4d8b",
+        "encoded": "try%20%7B",
+        "prevChunkIds": [
+          "a43baf"
+        ]
+      },
+      "74": {
+        "chunkId": "a43baf",
+        "hash": "0de847e9",
+        "encoded": "if%20(offlineModeEnabled)%20%7B",
+        "prevChunkIds": [
+          "a43baf"
+        ]
+      },
+      "75": {
+        "chunkId": "a43baf",
+        "hash": "e93dc594",
+        "encoded": "log.info(%22Using%20offline%20data%20provider%20for%20city:%20%7B%7D%22,%20city);",
+        "prevChunkIds": [
+          "a43baf"
+        ]
+      },
+      "76": {
+        "chunkId": "a43baf",
+        "hash": "c631ebb3",
+        "encoded": "WeatherResponse%20response%20=%20offlineProvider.getWeatherForecast(city);",
+        "prevChunkIds": [
+          "a43baf"
+        ]
+      },
+      "77": {
+        "chunkId": "a43baf",
+        "hash": "06f9d267",
+        "encoded": "log.info(%22Successfully%20fetched%20offline%20data%20for%20city:%20%7B%7D,%20dataSource:%20%7B%7D%22,%20city,%20response.getDataSource());",
+        "prevChunkIds": [
+          "a43baf"
+        ]
+      },
+      "78": {
+        "chunkId": "a43baf",
+        "hash": "7399d344",
+        "encoded": "return%20response;",
+        "prevChunkIds": [
+          "a43baf"
+        ]
+      },
+      "79": {
+        "chunkId": "a43baf",
+        "hash": "8aac2494",
+        "encoded": "%7D",
+        "prevChunkIds": [
+          "a43baf"
+        ]
+      },
+      "81": {
+        "chunkId": "a43baf",
+        "hash": "e04938cc",
+        "encoded": "//%20Try%20online%20first,%20fallback%20to%20offline",
+        "prevChunkIds": [
+          "a43baf"
+        ]
+      },
+      "82": {
+        "chunkId": "a43baf",
+        "hash": "a4de1efc",
+        "encoded": "log.info(%22Using%20online%20data%20provider%20for%20city:%20%7B%7D%22,%20city);",
+        "prevChunkIds": [
+          "a43baf"
+        ]
+      },
+      "83": {
+        "chunkId": "a43baf",
+        "hash": "e3483e49",
+        "encoded": "if%20(onlineProvider.isAvailable())%20%7B",
+        "prevChunkIds": [
+          "a43baf"
+        ]
+      },
+      "84": {
+        "chunkId": "a43baf",
+        "hash": "48ffdf95",
+        "encoded": "WeatherResponse%20response%20=%20onlineProvider.getWeatherForecast(city);",
+        "prevChunkIds": [
+          "a43baf"
+        ]
+      },
+      "85": {
+        "chunkId": "a43baf",
+        "hash": "a6f0138d",
+        "encoded": "log.info(%22Successfully%20fetched%20online%20data%20for%20city:%20%7B%7D,%20dataSource:%20%7B%7D%22,%20city,%20response.getDataSource());",
+        "prevChunkIds": [
+          "a43baf"
+        ]
+      },
+      "86": {
+        "chunkId": "a43baf",
+        "hash": "c53ebd66",
+        "encoded": "return%20response;",
+        "prevChunkIds": [
+          "a43baf"
+        ]
+      },
+      "87": {
+        "chunkId": "a43baf",
+        "hash": "6ce15ab1",
+        "encoded": "%7D%20else%20%7B",
+        "prevChunkIds": [
+          "a43baf"
+        ]
+      },
+      "88": {
+        "chunkId": "a43baf",
+        "hash": "16c45359",
+        "encoded": "log.warn(%22Online%20provider%20unavailable,%20falling%20back%20to%20offline%20data%22);",
+        "prevChunkIds": [
+          "a43baf"
+        ]
+      },
+      "89": {
+        "chunkId": "a43baf",
+        "hash": "07e2fbfb",
+        "encoded": "WeatherResponse%20response%20=%20offlineProvider.getWeatherForecast(city);",
+        "prevChunkIds": [
+          "a43baf"
+        ]
+      },
+      "90": {
+        "chunkId": "a43baf",
+        "hash": "8825c65d",
+        "encoded": "log.info(%22Successfully%20fetched%20fallback%20offline%20data%20for%20city:%20%7B%7D,%20dataSource:%20%7B%7D%22,%20city,%20response.getDataSource());",
+        "prevChunkIds": [
+          "a43baf"
+        ]
+      },
+      "91": {
+        "chunkId": "a43baf",
+        "hash": "5c8c3748",
+        "encoded": "return%20response;",
+        "prevChunkIds": [
+          "a43baf"
+        ]
+      },
+      "92": {
+        "chunkId": "a43baf",
+        "hash": "06a855c2",
+        "encoded": "%7D",
+        "prevChunkIds": [
+          "a43baf"
+        ]
+      },
+      "94": {
+        "chunkId": "a43baf",
+        "hash": "2cf880a2",
+        "encoded": "%7D%20catch%20(Exception%20e)%20%7B",
+        "prevChunkIds": [
+          "a43baf"
+        ]
+      },
+      "95": {
+        "chunkId": "a43baf",
+        "hash": "80d7c1b9",
+        "encoded": "log.error(%22Error%20fetching%20from%20primary%20provider,%20trying%20fallback%22,%20e);",
+        "prevChunkIds": [
+          "a43baf"
+        ]
+      },
+      "97": {
+        "chunkId": "a43baf",
+        "hash": "af545c36",
+        "encoded": "if%20(!offlineModeEnabled%20&&%20offlineProvider.isAvailable())%20%7B",
+        "prevChunkIds": [
+          "a43baf"
+        ]
+      },
+      "98": {
+        "chunkId": "a43baf",
+        "hash": "d5eccfb6",
+        "encoded": "log.info(%22Falling%20back%20to%20offline%20data%20due%20to%20error%22);",
+        "prevChunkIds": [
+          "a43baf"
+        ]
+      },
+      "99": {
+        "chunkId": "a43baf",
+        "hash": "e4284d46",
+        "encoded": "WeatherResponse%20response%20=%20offlineProvider.getWeatherForecast(city);",
+        "prevChunkIds": [
+          "a43baf"
+        ]
+      },
+      "100": {
+        "chunkId": "a43baf",
+        "hash": "11b43101",
+        "encoded": "log.info(%22Successfully%20fetched%20error%20fallback%20offline%20data%20for%20city:%20%7B%7D,%20dataSource:%20%7B%7D%22,%20city,%20response.getDataSource());",
+        "prevChunkIds": [
+          "a43baf"
+        ]
+      },
+      "102": {
+        "chunkId": "e0ff30",
+        "hash": "79409de0",
+        "encoded": "%7D",
+        "prevChunkIds": []
+      },
+      "104": {
+        "chunkId": "a43baf",
+        "hash": "d622f5c1",
+        "encoded": "throw%20e;",
+        "prevChunkIds": [
+          "a43baf"
+        ]
+      },
+      "131": {
+        "chunkId": "e0ff30",
+        "hash": "ee1799fc",
+        "encoded": "*%20Toggle%20offline%20mode%20at%20runtime",
+        "prevChunkIds": []
+      },
+      "132": {
+        "chunkId": "e0ff30",
+        "hash": "7c65114d",
+        "encoded": "*%20Clears%20cache%20when%20mode%20changes%20to%20ensure%20fresh%20data",
+        "prevChunkIds": [
+          "e0ff30"
+        ]
+      },
+      "134": {
+        "chunkId": "e0ff30",
+        "hash": "12085b44",
+        "encoded": "@CacheEvict(value%20=%20%22weather-forecasts%22,%20allEntries%20=%20true)",
+        "prevChunkIds": []
+      },
+      "135": {
+        "chunkId": "e0ff30",
+        "hash": "e187cf97",
+        "encoded": "public%20void%20setOfflineMode(boolean%20enabled)%20%7B",
+        "prevChunkIds": [
+          "e0ff30"
+        ]
+      },
+      "136": {
+        "chunkId": "e0ff30",
+        "hash": "8a1c03ad",
+        "encoded": "log.info(%22Switching%20offline%20mode%20to:%20%7B%7D,%20clearing%20cache%22,%20enabled);",
+        "prevChunkIds": [
+          "e0ff30"
+        ]
+      },
+      "137": {
+        "chunkId": "e0ff30",
+        "hash": "4cd1b91e",
+        "encoded": "this.offlineModeEnabled%20=%20enabled;",
+        "prevChunkIds": [
+          "e0ff30"
+        ]
+      }
+    }
+  }
+}
